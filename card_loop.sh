@@ -1,2 +1,2 @@
 #!/bin/bash
-while true ; do sudo ruby ./card_read.rb & sleep 1; done
+while true ; do sudo ruby ./card_reader.rb & sleep 1; done
