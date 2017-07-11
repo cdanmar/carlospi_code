@@ -14,7 +14,7 @@ end
 
 card = Mifare::Classic.new(r, uid, sak)
 
-p card.uid.join
+card.read
 
 # response = Unirest.post "http://httpbin.org/post", 
 #                         headers:{ "Accept" => "application/json" }, 
