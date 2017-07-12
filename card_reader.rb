@@ -12,15 +12,15 @@ rescue CommunicationError => e
   abort "Error communicating PICC: #{e.message}"
 end
 
-card = Mifare::Classic.new(r, uid, sak)
+c = Mifare::Classic.new(r, uid, sak)
 
-p card.uid.join
+card = c.uid.join
 
-# response = Unirest.post "http://httpbin.org/post", 
-#                         headers:{ "Accept" => "application/json" }, 
-#                         parameters:{ :age => 23, :foo => "bar" }
+response = Unirest.post "/participants", 
+                        headers:{ "Accept" => "application/json" }, 
+                        parameters:{ :identifier_key => card }
 
-# response.code # Status code
-# response.headers # Response headers
-# response.body # Parsed body
-# response.raw_body # Unparsed body
+response.code # Status code
+response.headers # Response headers
+response.body # Parsed body
+response.raw_body # Unparsed body
