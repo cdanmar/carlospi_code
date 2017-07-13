@@ -18,6 +18,10 @@ card = c.uid.join
 
 p card
 
-Unirest.post "Carloss-MBP:3000/participants", 
+# Unirest.post "Carloss-MBP:3000/participants", 
+#                         headers:{ "Accept" => "application/json" }, 
+#                         parameters:{ :identifier_key => card }
+
+Unirest.post "Carloss-MacBook-Pro.local:3000/participants", 
                         headers:{ "Accept" => "application/json" }, 
                         parameters:{ :identifier_key => card }
