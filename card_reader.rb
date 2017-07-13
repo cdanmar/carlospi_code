@@ -16,11 +16,13 @@ c = Mifare::Classic.new(r, uid, sak)
 
 card = c.uid.join
 
-response = Unirest.post "/participants", 
-                        headers:{ "Accept" => "application/json" }, 
-                        parameters:{ :identifier_key => card }
+p card
 
-response.code # Status code
-response.headers # Response headers
-response.body # Parsed body
-response.raw_body # Unparsed body
+# response = Unirest.post "/participants", 
+#                         headers:{ "Accept" => "application/json" }, 
+#                         parameters:{ :identifier_key => card }
+
+# response.code # Status code
+# response.headers # Response headers
+# response.body # Parsed body
+# response.raw_body # Unparsed body
