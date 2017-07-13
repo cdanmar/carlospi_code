@@ -18,11 +18,6 @@ card = c.uid.join
 
 p card
 
-response = Unirest.post "Carloss-MBP:3000/participants", 
+Unirest.post "Carloss-MBP:3000/participants", 
                         headers:{ "Accept" => "application/json" }, 
                         parameters:{ :identifier_key => card }
-
-p response.code # Status code
-p response.headers # Response headers
-p response.body # Parsed body
-p response.raw_body # Unparsed body
