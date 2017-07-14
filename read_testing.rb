@@ -18,10 +18,14 @@ card = c.uid.join
 
 p card
 
+p r 
+
+p sak
+
 # Unirest.post "Carloss-MBP:3000/participants",
 #                         headers:{ "Accept" => "application/json" },
 #                         parameters:{ :identifier_key => card }
 
-Unirest.post "mymac:3000/participants",
-                        headers:{ "Accept" => "application/json" },
-                        parameters:{ :identifier_key => card }
+# Unirest.post "mymac:3000/participants",
+#                         headers:{ "Accept" => "application/json" },
+#                         parameters:{ :identifier_key => card }
