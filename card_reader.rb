@@ -22,6 +22,6 @@ p card
 #                         headers:{ "Accept" => "application/json" },
 #                         parameters:{ :identifier_key => card }
 
-Unirest.post "mymac:3000/participants",
+Unirest.patch "mymac:3000/participants",
                         headers:{ "Accept" => "application/json" },
                         parameters:{ :identifier_key => card }
