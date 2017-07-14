@@ -20,7 +20,6 @@ p card
 
 p r 
 
-p sak
 
 # Unirest.post "Carloss-MBP:3000/participants",
 #                         headers:{ "Accept" => "application/json" },
